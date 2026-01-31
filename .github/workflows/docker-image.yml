@@ -11,18 +11,19 @@ jobs:
       contents: read
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4 #
+        uses: actions/checkout@v4
 
       - name: Log in to GitHub Docker Registry
-        uses: docker/login-action@v3 # <--- AICI ERA GRESEALA (era login-server)
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5 #
+        uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          # AICI AM MODIFICAT: am scris totul cu litere mici
+          tags: ghcr.io/${{ github.repository_owner }}/proiect-sincretic-2025-2026:latest
