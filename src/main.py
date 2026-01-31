@@ -16,6 +16,7 @@ def main():
     parser.add_argument("fisier")
     parser.add_argument("--top", type=int, default=10)
     parser.add_argument("--ngrams", type=int, default=1)
+    parser.add_argument("--diversity", action="store_true", help="Afiseaza statistici")
     args = parser.parse_args()
 
     if not os.path.exists(args.fisier): return
@@ -30,19 +31,23 @@ def main():
     lemmatizer = WordNetLemmatizer()
     cuvinte_procesate = [lemmatizer.lemmatize(w) for w in cuvinte_curate]
     
-    print(f"Analiza text: {args.fisier} ({len(tokens)} cuvinte)")
+    if args.diversity:
+        cuvinte_unice = set(cuvinte_procesate)
+        ttr = len(cuvinte_unice) / len(tokens)
+        print(f"Diversitate vocabular:")
+        print(f"Total cuvinte: {len(tokens)}")
+        print(f"Cuvinte unice: {len(cuvinte_unice)} ({len(cuvinte_unice)/len(tokens)*100:.1f}%)")
+        print(f"Type-Token Ratio: {ttr:.3f}")
+        return
 
+    print(f"Analiza text: {args.fisier} ({len(tokens)} cuvinte)")
     if args.ngrams > 1:
-        # Generam n-grame (perechi de cuvinte)
         n_grame = list(nltk.ngrams(cuvinte_procesate, args.ngrams))
         numaratoare = Counter(n_grame).most_common(args.top)
-        
         print(f"Top {args.top} {args.ngrams}-grame:")
         for i, (gram, count) in enumerate(numaratoare, 1):
-            text_gram = " ".join(gram)
-            print(f"{i}. \"{text_gram}\" - {count} aparitii")
+            print(f"{i}. \"{' '.join(gram)}\" - {count} aparitii")
     else:
-        # Analiza cuvinte individuale
         numaratoare = Counter(cuvinte_procesate).most_common(args.top)
         print(f"Top {args.top} cuvinte (fara stopwords):")
         for i, (cuvant, count) in enumerate(numaratoare, 1):
