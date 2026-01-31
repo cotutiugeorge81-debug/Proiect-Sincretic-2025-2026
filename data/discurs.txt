@@ -1,0 +1,10 @@
+Salut! Cel mai bine este să folosim un text care să conțină cuvintele din exemplul tău (dezvoltare, educație, sistem), astfel încât să poți verifica dacă cifrele și bigramele ies corect.
+
+Creează un fișier numit discurs.txt în același folder cu codul tău și lipește următorul text:
+
+Conținut pentru discurs.txt
+Sistemul de educație are nevoie de o dezvoltare durabilă pe termen lung. Această dezvoltare durabilă este esențială pentru viitorul oricărei societăți moderne. Într-un sistem educațional performant, procesul de educație superioară trebuie să fie strâns legat de activitatea de cercetare științifică.
+
+Studenții de astăzi caută inovație și tehnologie în fiecare universitate. Investiția în tehnologie și inovație reprezintă un proiect ambițios pentru orice universitate care își dorește excelență. Prin colaborare și cercetare științifică, putem transforma acest sistem educațional într-un model de succes.
+
+Educație superioară înseamnă mai mult decât cursuri; înseamnă proiecte de cercetare, tehnologie modernă și o strategie clară de dezvoltare durabilă. O bună colaborare între studenți și profesori va asigura că acest proiect de educație va continua să crească. Tehnologie, inovație și educație - aceștia sunt pilonii pentru o dezvoltare durabilă.
