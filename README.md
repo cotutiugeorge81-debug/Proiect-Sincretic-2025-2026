@@ -41,12 +41,19 @@ Vizualizare Cloud: python src/main.py data/discurs.txt --cloud
 
 Structura proiectului
 word-analyzer-upt/
+
 ├── .github/workflows/build.yml - CI/CD pipeline
+
 ├── src/
+
 │   └── main.py - Scriptul principal de analiză
+
 ├── data/
+
 │   └── discurs.txt - Fișier text pentru testare
+
 ├── Dockerfile - Configurația pentru containerizare
+
 └── README.md - Documentația curentă
 
 Probleme întâlnite și soluții
