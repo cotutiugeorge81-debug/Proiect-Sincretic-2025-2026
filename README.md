@@ -61,5 +61,7 @@ word-analyzer-upt/
 └── README.md - Documentația curentă
 
 Probleme întâlnite și soluții
+
 Problemă: Eroare OSError la încărcarea dicționarelor de stopwords.
+
 Soluție: Am corectat typo-ul din cod și am adăugat instrucțiunile nltk.download automate în main.py și Dockerfile.
