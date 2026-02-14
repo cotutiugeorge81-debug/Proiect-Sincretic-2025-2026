@@ -11,9 +11,13 @@ Aceasta curăță textul automat, elimină cuvintele de legătură (stopwords) �
 Tehnologii folosite
 Limbaj: Python 3.10
 Biblioteci:
+
 nltk - Procesarea limbajului natural (tokenizare, lemmatizare, n-grame)
+
 argparse - Gestionarea interfeței în linie de comandă
+
 collections.Counter - Numărarea eficientă a frecvențelor
+
 
 Instalare & Rulare (Fără Docker)
 # Instalare dependinte
